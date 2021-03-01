@@ -12,6 +12,7 @@ cd $BUILD_DIR
 mkdir -p $LOCATION/bin
 wget -O rabbitmq-cli-consumer.tgz $PACKAGE
 tar xvf rabbitmq-cli-consumer.tgz
+rm rabbitmq-cli-consumer.tgz
 mv $BINARY $LOCATION/bin/rabbitmq-cli-consumer
 
 echo "-----> Building runtime environment for rabbitmq-cli-consumer to $LOCATION"
