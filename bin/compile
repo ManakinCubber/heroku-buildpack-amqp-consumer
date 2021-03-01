@@ -5,13 +5,13 @@ echo "-----> Installing rabbitmq-cli-consumer using build directory $1"
 
 BUILD_DIR=$1
 PACKAGE="https://github.com/corvus-ch/rabbitmq-cli-consumer/releases/download/2.3.3/rabbitmq-cli-consumer_2.3.3_linux_amd64.tar.gz"
-BINARY="rabbitmq-cli-consumer_2.3.3_linux_amd64/rabbitmq-cli-consumer"
+BINARY="rabbitmq-cli-consumer/rabbitmq-cli-consumer"
 LOCATION="$BUILD_DIR/vendor/rabbitmq-cli-consumer"
 
 cd $BUILD_DIR
 mkdir -p $LOCATION/bin
-wget -O rabbitmq-cli-consumer_2.3.3_linux_amd64.tar.gz $PACKAGE
-tar xvf rabbitmq-cli-consumer_2.3.3_linux_amd64.tar.gz
+wget -O rabbitmq-cli-consumer.tgz $PACKAGE
+tar xvf rabbitmq-cli-consumer.tgz
 mv $BINARY $LOCATION/bin/rabbitmq-cli-consumer
 
 echo "-----> Building runtime environment for rabbitmq-cli-consumer to $LOCATION"
