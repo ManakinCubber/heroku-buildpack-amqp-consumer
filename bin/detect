@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# bin/detect <build-dir>
+
+echo "rabbitmq-cli-consumer 2.3.3"
+exit 0
